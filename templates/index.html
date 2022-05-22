@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+<div style="text-align: right;">
+    <p>
+        {% if request.user.is_authenticated %}
+        Hoşgeldin, <b>{{ request.user.username }}</b>
+        {% else %}
+            Giriş Yapılmamış
+        {% endif %}
+    </p>
+</div>
+<div class="jumbotron text-center">
+    <h3>KTBMYO Blog Sayfasına Hoşgeldiniz</h3>
+    <p>
+        Bu Blogta Bölümümüz ve Okulumuzla ilgili duyurular, gelişmeler, ders notları ve makaleler paylaşılacaktır.
+    </p>
+</div>
+
+    <p>
+        <b>Duyurular ve Etkinlikler</b>
+    </p>
+    <ul>
+        <li> Diploması Hazır Olan Öğrenci Listesi 05.05.2022 </li>
+        <li> 2021-2022 Bahar Dönemi Staj Takvimi </li>
+        <li> YÖKSİS Güncelleme İşlemleri (E- Devlet, Ösym, Vb. İşlemler) </li>
+        <li> Uluslararası Öğrencilerin Kimlik Kartları </li>
+        <li> Öğretim Elemanı Alım İlanı </li>
+    </ul>
+{% endblock body %}
